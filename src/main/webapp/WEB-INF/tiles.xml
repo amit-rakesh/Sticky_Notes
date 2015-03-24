@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">  
+<tiles-definitions>  
+
+	<!-- Login Template -->
+    <definition name="login" template="/WEB-INF/views/layout/login-template.jsp"> 
+        <put-attribute name="body" value="/WEB-INF/views/login.jsp" />  
+    </definition>
+    
+    <definition name="signup" template="/WEB-INF/views/layout/signup-template.jsp"> 
+        <put-attribute name="body" value="/WEB-INF/views/signup.jsp" />  
+    </definition>
+    
+    <!-- Application Home Page Template -->
+    <definition name="base.definition" template="/WEB-INF/views/layout/main-template.jsp">  
+    	<put-attribute name="globallinks" value="/WEB-INF/views/commons/globalLinks.jsp" />
+        <put-attribute name="header" value="/WEB-INF/views/commons/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/commons/menu.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/views/commons/footer.jsp" />  
+    </definition>  
+    
+    <definition name="stickynotes" extends="base.definition"> 
+        <put-attribute name="body" value="/WEB-INF/views/stickynotes.jsp" />  
+    </definition>
+    
+    <definition name="uploadFile" extends="base.definition"> 
+        <put-attribute name="body" value="/WEB-INF/views/uploadFile.jsp" />  
+    </definition>
+    
+    <definition name="readFile" extends="base.definition"> 
+        <put-attribute name="body" value="/WEB-INF/views/readFile.jsp" />  
+    </definition>
+    
+    <definition name="newFile" extends="base.definition"> 
+        <put-attribute name="body" value="/WEB-INF/views/newFile.jsp" />  
+    </definition>
+  
+    <definition name="createFolder" extends="base.definition"> 
+        <put-attribute name="body" value="/WEB-INF/views/createFolder.jsp" />  
+    </definition>
+    
+    <definition name="showfile" extends="base.definition"> 
+        <put-attribute name="body" value="/WEB-INF/views/showfile.jsp" />  
+    </definition>
+</tiles-definitions>  
